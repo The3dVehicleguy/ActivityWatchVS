@@ -52,6 +52,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AWPackage.cs" />
+    <Compile Include="GeneralSettings.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -82,12 +83,17 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Listeners\DTE2EventListener.cs" />
+    <Compile Include="VSPackage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VSPackage.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <Resource Include="AWPackage.ico" />
     <None Include="GeneralSettings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>GeneralSettings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Key.snk" />
@@ -153,6 +159,8 @@
     <EmbeddedResource Include="VSPackage.resx">
       <MergeWithCTO>true</MergeWithCTO>
       <ManifestResourceName>VSPackage</ManifestResourceName>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>VSPackage.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
